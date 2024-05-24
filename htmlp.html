@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction à JavaScript et PHP</title>
+    <link rel="stylesheet" href="./assets/css/htmlp.css">
+</head>
+
+<body>
+    <header>
+        <h1>Introduction à JavaScript et PHP</h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./pages/html.html">HTML</a></li>
+                <li><a href="./pages/htmln.html">CSS</a></li>
+                <li><a href="./htmlp.html">JavaScript</a></li>
+                <li><a href="./pages/blabla.html">PHP</a></li>
+                <li><a href="./end.html">nous contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="explication">
+        <h2>Texte Explicatif</h2>
+        <p>JavaScript est un langage de programmation utilisé pour rendre les pages web interactives. PHP est un langage
+            côté serveur utilisé pour générer du contenu dynamique sur le web.</p>
+        <p>JavaScript est exécuté dans le navigateur de l'utilisateur, tandis que PHP est exécuté sur le serveur avant
+            que la page ne soit envoyée au navigateur.</p>
+    </section>
+
+    <section id="illustrations">
+        <h2>Illustrations</h2>
+        <div class="illustration">
+            <h3>Intégration de JavaScript et PHP dans les pages HTML</h3>
+            <img src="./assets/img/R.png" alt="Diagramme d'intégration de JavaScript et PHP">
+        </div>
+    </section>
+
+    <section id="exemples">
+        <h2>Exemples</h2>
+        <div class="example">
+            <h3>Exemple de script JavaScript interactif</h3>
+            <button id="myButton">Cliquez-moi</button>
+            <p id="output"></p>
+            <pre><code>
+&lt;!-- HTML --&gt;
+&lt;button id="myButton"&gt;Cliquez-moi&lt;/button&gt;
+&lt;p id="output"&gt;&lt;/p&gt;
+
+&lt;!-- JavaScript --&gt;
+document.getElementById('myButton').addEventListener('click', function() {
+    document.getElementById('output').innerText = 'Bonjour, monde!';
+});
+            </code></pre>
+        </div>
+        <div class="example">
+            <h3>Exemple de script PHP côté serveur</h3>
+            <pre><code>
+&lt;!-- PHP --&gt;
+&lt;?php
+echo "Bonjour, monde!";
+?&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Introduction à JavaScript et PHP</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

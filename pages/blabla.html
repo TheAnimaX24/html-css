@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction à HTML</title>
+    <link rel="stylesheet" href="../assets/css/html.css">
+</head>
+
+<body>
+    <header>
+        <h1>Explication de PHP</h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../pages/html.html">HTML</a></li>
+                <li><a href="../pages/htmln.html">CSS</a></li>
+                <li><a href="../htmlp.html">JavaScript</a></li>
+                <li><a href="#php">PHP</a></li>
+                <li><a href="../end.html">nous contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="explication">
+        <h2>PHP</h2>
+        <p>PHP est un langage de script côté serveur, principalement utilisé pour le développement web. Il permet de
+            créer des pages web dynamiques et de gérer des bases de données.
+                <code>&lt;p&gt;</code>.</p>
+    </section>
+
+    <section id="illustrations">
+        <h2>Intégration de PHP</h2>
+        <div class="illustration">
+            <img src="../assets/img/php-diag.png" alt="Structure de base d'une page HTML">
+        </div>
+    </section>
+
+    <section id="exemples">
+        <h2>Exemples de scripts PHP</h2>
+        <div class="example">
+            <h3>Exemple interactif PHP</h3>
+            <pre><code>
+                &lt;?php
+                $servername = "localhost";
+                $username = "nom_utilisateur";
+                $password = "mot_de_passe";
+                $dbname = "ma_base_de_donnees";
+                
+                // Créer une connexion
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                
+                // Vérifier la connexion
+                if ($conn->connect_error) {
+                    die("Connexion échouée: " . $conn->connect_error);
+                }
+                
+                $sql = "SELECT id, nom FROM utilisateurs";
+                $result = $conn->query($sql);
+                
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "id: " . $row["id"]. " - Nom: " . $row["nom"]. "&lt;br&gt;";
+                    }
+                } else {
+                    echo "0 résultats";
+                }
+                $conn->close();
+                ?&gt;
+            </code></pre>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Introduction à HTML</p>
+    </footer>
+</body>
+
+</html>
